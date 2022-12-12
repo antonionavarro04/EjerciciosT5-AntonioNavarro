@@ -61,7 +61,7 @@ public class Main {
         }
 
         // ! Imprimimos los resultados
-        System.out.println("El numero máximo es [" + posicionArrayMaximo + "] > " +  numeroMaximo);
-        System.out.println("El numero mínimo es [" + posicionArrayMinimo + "] > " +  numeroMinimo);
+        System.out.println("El numero máximo es [" + posicionArrayMaximo + "] > " + numeroMaximo);
+        System.out.println("El numero mínimo es [" + posicionArrayMinimo + "] > " + numeroMinimo);
     } // € Hecho por Antonio Navarro
 }
