@@ -15,6 +15,7 @@ public class Main {
 
         // ! Mediante un bucle for each mostraremos los valores del array
         System.out.println("Los numeros aleatorios generados son: ");
+        
         for (byte numero : numerosAleatorios) {
             // ! Imprimimos el valor del array
             System.out.println("[" + posicion + "] > " + numero);
