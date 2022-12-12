@@ -1,4 +1,3 @@
-// ? Limite de short = 
 package ejercicio2;
 
 public class Main {
