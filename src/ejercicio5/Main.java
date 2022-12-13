@@ -14,8 +14,8 @@ public class Main {
         byte posicionArrayMinimo = 0;
 
         // ^ Definimos la variable numeroMáximo y numeroMínimo
-        double numeroMaximo = 0;
-        double numeroMinimo = 0;
+        double numeroMaximo;
+        double numeroMinimo;
 
         // ^ Definimos un array de 10 posiciones en la variable listaNumerosReales
         double[] listaNumerosReales = new double[10];
@@ -51,12 +51,12 @@ public class Main {
             System.out.println("[" + posicionArray + "] = " + numeroArray + " | El numero mínimo es: " + numeroMinimo + " y el máximo es: " + numeroMaximo + "\n");
 
             // ! Combrobamos si el numero actual es mayor o menor que el numero máximo y mínimo
-            if (numeroArray > numeroMaximo){
-                System.out.println(numeroArray + " > " + numeroMaximo + "\n");
+            if (numeroArray > numeroMaximo){ // ! Primero comprobaremos el numero maximo
+                System.out.println(numeroArray + " > " + numeroMaximo + "\n"); // Imprimimos el numero actual y el nuevo numero minimo
                 numeroMaximo = numeroArray; // * En caso de que el numero sea mayor al anterior máximo sustituiremos el anterior
                 posicionArrayMaximo = posicionArray;
-            } if (numeroArray < numeroMinimo){
-                System.out.println(numeroArray + " < " + numeroMinimo + "\n");
+            } if (numeroArray < numeroMinimo){ // ! Después comprobaremos el numero minimo
+                System.out.println(numeroArray + " < " + numeroMinimo + "\n"); // Imprimimos el numero actual y el nuevo numero minimo
                 numeroMinimo = numeroArray; // * En caso de que el numero sea menor al anterior mínimo sustituiremos el anterior
                 posicionArrayMinimo = posicionArray;
             } posicionArray++; // * Incrementamos la posición del array
