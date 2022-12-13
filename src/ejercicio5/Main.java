@@ -60,19 +60,13 @@ public class Main {
                 numeroMinimo = numeroArray; // * En caso de que el numero sea menor al anterior mínimo sustituiremos el anterior
                 posicionArrayMinimo = posicionArray;
             } posicionArray++; // * Incrementamos la posición del array
-
-            try { // ? Delay agregado para que se vea mejor el proceso
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
 
-        // ? Salto de Línea Triple
-        System.out.println("\n------------------------------\n");
+        // ? Salto de Línea Doble
+        System.out.println("------------------------------\n");
 
         // ! Imprimimos los resultados
-        System.out.println("El numero máximo es [" + posicionArrayMaximo + "] > " + numeroMaximo);
-        System.out.println("El numero mínimo es [" + posicionArrayMinimo + "] > " + numeroMinimo);
+        System.out.println("El numero máximo es [" + posicionArrayMaximo + "] --> " + numeroMaximo);
+        System.out.println("El numero mínimo es [" + posicionArrayMinimo + "] --> " + numeroMinimo);
     } // € Hecho por Antonio Navarro
 }
