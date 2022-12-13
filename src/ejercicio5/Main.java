@@ -35,30 +35,41 @@ public class Main {
             listaNumerosReales[i] = read.nextDouble();
         }
 
+        // ! Sobreescribimos el valor minimo y maximo del array con la posición 0 del array
+        numeroMaximo = listaNumerosReales[0];
+        numeroMinimo = listaNumerosReales[0];
+
         // ^ Cerramos el Scanner tras su uso
         read.close();
 
         // ? Salto de Línea Triple
         System.out.println("\n------------------------------\n");
 
-        // ! Recorremos el array en busca del numero máximo
+        // ! Recorremos el array en busca del numero máximo y mínimo
         for (double numeroArray : listaNumerosReales){
-            if (numeroArray > numeroMaximo){ // * En caso de que el numero sea mayor al anterior máximo sustituiremos el anterior
-                numeroMaximo = numeroArray;
-                posicionArrayMaximo = posicionArray;
-            } posicionArray++;
-        } posicionArray = 0; // * Volvemos a poner a 0 la posición del array
+            // ! Imprimimos el numero actual de la posición del array así como el número máximo y mínimo
+            System.out.println("[" + posicionArray + "] = " + numeroArray + " | El numero mínimo es: " + numeroMinimo + " y el máximo es: " + numeroMaximo + "\n");
 
-        // ! Recorremos el array en busca del numero minimo
-        for (double numeroArray : listaNumerosReales){
-            if (posicionArray == 0){ // * Si es la primera posición siempre vamos a sustituir el numero mínimo
-                numeroMinimo = numeroArray;
+            // ! Combrobamos si el numero actual es mayor o menor que el numero máximo y mínimo
+            if (numeroArray > numeroMaximo){
+                System.out.println(numeroArray + " > " + numeroMaximo + "\n");
+                numeroMaximo = numeroArray; // * En caso de que el numero sea mayor al anterior máximo sustituiremos el anterior
+                posicionArrayMaximo = posicionArray;
+            } if (numeroArray < numeroMinimo){
+                System.out.println(numeroArray + " < " + numeroMinimo + "\n");
+                numeroMinimo = numeroArray; // * En caso de que el numero sea menor al anterior mínimo sustituiremos el anterior
                 posicionArrayMinimo = posicionArray;
-            } else if (numeroArray < numeroMinimo){ // * En caso de que no sea la primera comprobaremos si es menor o no
-                numeroMinimo = numeroArray;
-                posicionArrayMinimo = posicionArray;
-            } posicionArray++;
+            } posicionArray++; // * Incrementamos la posición del array
+
+            try { // ? Delay agregado para que se vea mejor el proceso
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+
+        // ? Salto de Línea Triple
+        System.out.println("\n------------------------------\n");
 
         // ! Imprimimos los resultados
         System.out.println("El numero máximo es [" + posicionArrayMaximo + "] > " + numeroMaximo);
