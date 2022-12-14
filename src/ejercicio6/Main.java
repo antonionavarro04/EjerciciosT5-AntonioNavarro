@@ -29,5 +29,5 @@ public class Main {
         // ! Llamamos a la función para mostrar los números de un array
         System.out.println("Estos son los numeros introducidos y si sin Pares o Impares");
         Methods.printNormalArrayEvenOrOdd(arrayEvenOrOdd);
-    }
+    } // € Hecho por Antonio Navarro
 }

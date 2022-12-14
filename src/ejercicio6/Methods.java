@@ -32,4 +32,4 @@ public class Methods {
             return "Impar";
         }
     }
-}
+} // € Hecho por Antonio Navarro
